@@ -35,6 +35,8 @@ public class CategoryAddActivity extends AppCompatActivity {
         // Retrieve and initially hide the ProgressBar
         progressBar = binding.progressBar;
         progressBar.setVisibility(View.GONE);
+        // Set click listener for the back button to navigate to the previous screen
+        binding.backBtn.setOnClickListener(v -> onBackPressed());
         //hadle click,begin upload category
         binding.submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
